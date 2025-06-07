@@ -79,7 +79,8 @@
 
     <div>
       <img id="avatar-preview" class="w-20 h-20 rounded-full"
-        src="{{ $user->avatar ? asset($user->avatar) : asset('img/default-avatar.png') }}" alt="{{ $user->name }}">
+        src="{{ $user->avatar ? asset('storage/' . $user->avatar) : asset('img/default-avatar.png') }}"
+        alt="{{ $user->name }}">
     </div>
 
     <div class="flex items-center gap-4">
