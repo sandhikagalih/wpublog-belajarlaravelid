@@ -24,7 +24,7 @@
           <x-slot name="trigger">
             <div class="flex items-center px-5">
               <div class="flex-shrink-0">
-                <img class="w-8 h-8 rounded-full" src="{{ asset(Auth::user()->avatar) }}"
+                <img class="w-8 h-8 rounded-full" src="{{ asset('storage/' . Auth::user()->avatar) }}"
                   alt="{{ Auth::user()->name }}">
               </div>
               <button
@@ -88,7 +88,8 @@
     <div class="pt-4 pb-1 border-t border-gray-200">
       <div class="flex items-center px-5">
         <div class="flex-shrink-0">
-          <img class="w-8 h-8 rounded-full" src="{{ asset(Auth::user()->avatar) }}" alt="{{ Auth::user()->name }}">
+          <img class="w-8 h-8 rounded-full" src="{{ asset('storage/' . Auth::user()->avatar) }}"
+            alt="{{ Auth::user()->name }}">
         </div>
         <div class="px-4">
           <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
